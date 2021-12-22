@@ -40,7 +40,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
 
     console.log("Session inside post"+JSON.stringify(session, null, 2))
 
-    if(!session.activeSubscription) {
+    if(!session?.activeSubscription) {
         return {
             redirect: {
                 destination: '/',
